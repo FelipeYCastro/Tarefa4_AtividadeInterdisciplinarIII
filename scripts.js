@@ -1,8 +1,11 @@
 const form = document.getElementById("form");
 const username = document.getElementById("username");
 const email = document.getElementById("email");
-const password = document.getElementById("password");
-const passwordConfirmation = document.getElementById("password-confirmation");
+const btn = document.querySelector("button");
+
+btn.addEventListener("click", () => {
+  ativar(msg);
+});
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -14,7 +17,6 @@ function CheckInputs() {
   const usernameValue = username.value;
   const emailValue = email.value;
   const passwordValue = password.value;
-  const passwordConfirmationValue = passwordConfirmation.value;
 
   if (usernameValue === "") {
     setErrorFor(username, "O nome do usuáro é obrigatório.");
@@ -38,22 +40,14 @@ function CheckInputs() {
     setSuccessFor(password);
   }
 
-  if (passwordConfirmationValue === "") {
-    setErrorFor(passwordConfirmation, "A confirmação de senha é obrigatória.");
-  } else if (passwordConfirmationValue !== passwordValue) {
-    setErrorFor(passwordConfirmation, "As senhas não conferem.");
-  } else {
-    setSuccessFor(passwordConfirmation);
-  }
-
   const formControls = form.querySelectorAll(".form-control");
 
   const formIsValid = [...formControls].every((formControl) => {
-    return formControl.className === "form-control success";
+    return formControl.className == "form-control success";
   });
 
   if (formIsValid) {
-    console.log("O formulário está 100% válido!");
+    alert("O formulário está preenchido corretamente!");
   }
 }
 

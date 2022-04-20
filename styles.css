@@ -6,7 +6,6 @@
 }
 
 :root {
-  --bg-background-pagina2: linear-gradient(90deg, #00dbde, #fc00ff 100%);
   --bg-background-pagina: #dfe6e9;
   --bg-background-formulario: #eee;
   --bg-background-botton: #636e72;
@@ -17,10 +16,11 @@
 body {
   width: 100%;
   height: 100vh;
-  background: var(--bg-background-pagina2);
+  background: var(--bg-background-pagina);
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .container {
@@ -50,6 +50,7 @@ body {
 .form-control label {
   display: inline-block;
   margin-bottom: 5px;
+  font-weight: bold;
 }
 
 .form-control input {
