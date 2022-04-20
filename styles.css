@@ -6,9 +6,9 @@
 }
 
 :root {
-  --bg-background-pagina: #dfe6e9;
-  --bg-background-formulario: #eee;
-  --bg-background-botton: #636e72;
+  --bg-background-pagina: #3c6382;
+  --bg-background-formulario: #0a3d62;
+  --bg-background-botton: #3c6382;
   --bg-color-success: #2ecc71;
   --bg-color-error: #e74c3c;
 }
@@ -33,7 +33,7 @@ body {
 }
 
 .header {
-  background-color: #b2bec3;
+  background-color: var(--bg-background-botton);
   padding: 20px;
 }
 
@@ -54,7 +54,7 @@ body {
 }
 
 .form-control input {
-  border: 2px solid #ccc;
+  border: 4px solid #ccc;
   display: block;
   border-radius: 10px;
   font-size: 14px;
