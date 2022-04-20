@@ -9,13 +9,14 @@
   --bg-background-pagina: #3c6382;
   --bg-background-formulario: #0a3d62;
   --bg-background-botton: #3c6382;
+  --bg-background-boxshadow: #82ccdd;
   --bg-color-success: #2ecc71;
   --bg-color-error: #e74c3c;
 }
 
 body {
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   background: var(--bg-background-pagina);
   display: flex;
   justify-content: center;
@@ -26,15 +27,16 @@ body {
 .container {
   background-color: var(--bg-background-formulario);
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 5px var(--bg-background-boxshadow);
   width: 400px;
   max-width: 100%;
   overflow: hidden;
+  margin-top: 100px;
 }
 
 .header {
   background-color: var(--bg-background-botton);
-  padding: 20px;
+  padding: 10px;
 }
 
 .form {
@@ -54,7 +56,7 @@ body {
 }
 
 .form-control input {
-  border: 4px solid #ccc;
+  border: 4px solid var(--bg-background-botton);
   display: block;
   border-radius: 10px;
   font-size: 14px;
@@ -78,7 +80,7 @@ body {
 
 .form button {
   background-color: var(--bg-background-botton);
-  border: 2px solid var(--bg-background-botton);
+  border: 3px solid var(--bg-background-boxshadow);
   color: #fff;
   font-size: 14px;
   width: 100%;
@@ -112,4 +114,16 @@ body {
 .form-control.error small {
   visibility: visible;
   color: var(--bg-color-error);
+}
+
+footer {
+  position: absolute;
+  max-height: 150px;
+  width: 100%;
+  padding: 20px 20px;
+  margin: 0 auto;
+  text-align: center;
+  bottom: 0;
+  font-weight: bold;
+  background-color: var(--bg-background-formulario);
 }
