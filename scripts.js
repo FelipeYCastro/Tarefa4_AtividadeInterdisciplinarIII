@@ -19,7 +19,7 @@ function CheckInputs() {
   const passwordValue = password.value;
 
   if (usernameValue === "") {
-    setErrorFor(username, "O nome do usuáro é obrigatório.");
+    setErrorFor(username, "O nome do usuário é obrigatório.");
   } else {
     setSuccessFor(username);
   }
